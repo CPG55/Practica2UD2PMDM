@@ -1,0 +1,148 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TabHost android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TabWidget android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@android:id/tabs" />
+
+            <FrameLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@android:id/tabcontent" >
+
+
+                <!-- TAB 1 -->
+
+                <LinearLayout android:id="@+id/tab1"
+                    android:text="@string/tab1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView android:id="@+id/textView_Ajustes_Tab1"
+                        android:text="@string/texto_apuesta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+
+                        />
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinner_ajustes_Tab1"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"/>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TableRow>
+
+                            <Button
+                                android:text="@string/boton_ajustes_guardar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/boton_ajustes1_guardar"
+                                android:onClick="boton_GuardarAjustes"/>
+
+                            <Button
+                                android:text="@string/boton_ajustes_volver"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/boton_ajustes1_volver"
+                                android:onClick="boton_volver"/>
+                        </TableRow>
+
+                    </TableLayout>
+                </LinearLayout>
+                <!-- TAB 1 -->
+
+
+                <!-- TAB 2 -->
+                <LinearLayout android:id="@+id/tab2"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView android:id="@+id/textView_Ajustes_Tab2"
+                        android:text="@string/texto_partido"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+
+                        />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TableRow>
+
+                            <EditText
+                                android:id="@+id/editText_ajustes_num1"
+                                android:hint="@string/texto_ajustes_num1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="5"
+                                android:maxLength="3"
+
+                                />
+
+                            <EditText
+                                android:id="@+id/editText_ajustes_num2"
+                                android:hint="@string/texto_ajustes_num2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="5"
+                                android:maxLength="3"
+
+                                />
+
+
+                        </TableRow>
+
+                        <TableRow>
+
+                            <Button
+                                android:text="@string/boton_ajustes_guardar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/boton_ajustes2_guardar"
+                                android:onClick="boton_GuardarAjustes"/>
+
+                            <Button
+                                android:text="@string/boton_ajustes_volver"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/boton_ajustes2_volver"
+                                android:onClick="boton_volver" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+                <!-- TAB 2 -->
+
+
+            </FrameLayout>
+            <!-- FIN DE FRAME LAYOUT CONTENEDOR DE TABS -->
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

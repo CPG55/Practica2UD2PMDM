@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tarea PMDM02</string>
+    <string name="boton_ajustes">Settings</string>
+    <string name="boton_apuestas">Bets</string>
+    <string name="boton_registro">Register</string>
+    <string name="boton_sorteo">Gift away</string>
+    <string name="boton_validar">Validate</string>
+    <string name="boton_volver">Back</string>
+    <string name="edad">Age</string>
+    <string name="email">Email</string>
+    <string name="nombre">Name</string>
+    <string name="textview_titulomain">Online Bets</string>
+    <string name="textview_tituloregistro">Register your Dates</string>
+    <string name="boton_apuestasaceptar">Accept</string>
+    <string name="boton_apuestascancelar">Cancel</string>
+    <string name="textview_tituloapuestas">Bets</string>
+    <string name="checkbox_baloncesto">Basketball</string>
+    <string name="checkbox_balonmano">Handball</string>
+    <string name="checkbox_futbol">Soccer</string>
+    <string name="checkbox_tenis">Tennis</string>
+    <string name="menu_ayuda">Help</string>
+    <string name="menu_informacion">Information</string>
+    <string name="imagen_baloncesto">Basketball</string>
+    <string name="imagen_balonmano">Handball</string>
+    <string name="imagen_futbol">Soccer</string>
+    <string name="imagen_tenis">Tennis</string>
+    <string name="texto_apuesta">Money to bet</string>
+    <string name="tab1">MONEY</string>
+    <string name="tab2">COMBINATION</string>
+    <string name="boton_ajustes_guardar">SAVE</string>
+    <string name="boton_ajustes_volver">BACK</string>
+    <string name="texto_acerca_autor">Author: Carlos Pérez González</string>
+    <string name="texto_acerca_fecha">Year: 2016</string>
+    <string name="boton_acercaDe">About</string>
+    <string name="acerca_de">About</string>
+    <string name="string_apuesta">Your bet:</string>
+    <string name="string_deporteApostado">"Your sport choosed: "</string>
+</resources>

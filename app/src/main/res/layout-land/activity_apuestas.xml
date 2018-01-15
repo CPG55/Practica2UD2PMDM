@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <TableRow>
+    <TextView
+
+        android:id="@+id/textView_TituloApuestas"
+        android:text="@string/textview_tituloapuestas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_span="2"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="@color/colorRojo"
+        android:padding="10dp"
+        />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_test"
+            android:contentDescription="@string/imagen_futbol"
+            android:id="@+id/imageView_Futbol"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_Futbol"
+            android:text="@string/checkbox_futbol" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tenis"
+            android:id="@+id/imageView_Tenis"
+            android:contentDescription="@string/imagen_tenis"
+            />
+
+        <CheckBox
+            android:text="@string/checkbox_tenis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_Tenis" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_basket"
+            android:id="@+id/imageView_Basket"
+            android:contentDescription="@string/imagen_baloncesto"
+            />
+
+        <CheckBox
+            android:text="@string/checkbox_baloncesto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_Baloncesto" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_balonmano"
+            android:id="@+id/imageView_Balonmano"
+            android:contentDescription="@string/imagen_balonmano" />
+
+        <CheckBox
+            android:text="@string/checkbox_balonmano"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_Balonmano" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/boton_ApuestasAceptar"
+            android:text="@string/boton_apuestasaceptar"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/boton_ApuestasVolver"
+            android:text="@string/boton_volver"
+            android:onClick="boton_volver" />
+
+    </TableRow>
+
+</TableLayout>

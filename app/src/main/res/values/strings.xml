@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Tarea PMDM02</string>
+
+    <!-- Cadenas Activity Main-->
+
+    <string name="textview_titulomain">Apuestas Online</string>
+    <string name="boton_registro">Registro</string>
+    <string name="boton_apuestas">Apuestas</string>
+    <string name="boton_ajustes">Ajustes</string>
+    <string name="boton_sorteo">Sorteo</string>
+
+    <!-- Cadenas Activity Registro-->
+    <string name="textview_tituloregistro">Registro</string>
+    <string name="nombre">Nombre</string>
+    <string name="email">Email</string>
+    <string name="edad">Edad</string>
+    <string name="boton_validar">Validar</string>
+    <string name="boton_volver">Volver</string>
+
+    <!-- Cadenas Activity Apuestas-->
+
+    <string name="textview_tituloapuestas">Apuestas</string>
+
+    <string name="checkbox_futbol">Fútbol</string>
+    <string name="checkbox_tenis">Tenis</string>
+    <string name="checkbox_baloncesto">Baloncesto</string>
+    <string name="checkbox_balonmano">Balonmano</string>
+
+    <string name="boton_apuestasaceptar">Aceptar</string>
+    <string name="boton_apuestascancelar">Cancelar</string>
+
+    <!-- Cadenas Activity Ajustes-->
+    <string name="tab1">DINERO</string>
+    <string name="tab2">COMBINACIÓN</string>
+    <string name="texto_apuesta">Dinero a apostar</string>
+    <string name="boton_ajustes_guardar">GUARDAR</string>
+    <string name="boton_ajustes_volver">VOLVER</string>
+    <string name="texto_ajustes_num1" translatable="false">Numero 1</string>
+    <string name="texto_ajustes_num2" translatable="false">Numero 2</string>
+    <string name="texto_partido" translatable="false">Evento</string>
+
+    <!-- Cadenas Activity Menu -->
+
+    <string name="menu_informacion">Acerca de</string>
+    <string name="menu_ayuda">Ayuda</string>
+
+
+    <!-- Cadenas Imagenes Deportes -->
+    <string name="imagen_futbol">Futbol</string>
+    <string name="imagen_tenis">Tenis</string>
+    <string name="imagen_baloncesto">Baloncesto</string>
+    <string name="imagen_balonmano">Balonmano</string>
+
+    <!-- ULTIMAS Cadenas añadidas -->
+
+    <string name="boton_acercaDe">Acerca de</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="texto_acerca_autor">Autor: Carlos Pérez González</string>
+    <string name="texto_acerca_fecha">Año: 2016</string>
+    <string name="texto_ayuda" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat ligula eu odio elementum, eu malesuada enim scelerisque. Curabitur blandit, tortor vitae convallis malesuada, enim nisi volutpat nulla, vel rhoncus arcu lorem eget lacus. Nam scelerisque dui ac nunc dictum, dignissim vestibulum magna laoreet. Etiam ut quam vel nunc varius rutrum vitae non nisl. Morbi eu lacinia ipsum, non suscipit arcu. Phasellus bibendum ac sem et malesuada. Sed ultrices velit a velit interdum, ac rhoncus purus pharetra. In dapibus semper sapien, non porttitor justo euismod at. Quisque iaculis sapien hendrerit vehicula tempus. Donec ornare neque non augue iaculis, a lobortis tortor aliquet. Morbi pulvinar luctus lorem in placerat. Duis pulvinar enim at neque vehicula congue. In volutpat, nulla ut aliquet malesuada, turpis sem elementum metus, vitae gravida nisi mi vitae ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ornare vel magna quis pulvinar. Maecenas sit amet fringilla mi, nec laoreet dolor. Phasellus auctor diam nec mollis dictum. Morbi faucibus odio nec purus consequat, ac pretium quam iaculis. Ut id eleifend nisl. Mauris egestas pharetra leo vitae dapibus. Suspendisse pretium massa eu turpis aliquam bibendum suscipit ac tortor. Suspendisse porta ipsum hendrerit cursus placerat. Nam mollis eros at posuere faucibus. Pellentesque urna ex, maximus sed arcu sit amet, aliquet lacinia neque. Pellentesque semper arcu at nisi gravida, nec aliquet velit vulputate. Donec quis leo eu eros pharetra tristique sit amet vel nulla. Nunc elit nibh, blandit eu velit in, tempor semper ante. Quisque feugiat orci tempor libero porta rhoncus. Suspendisse iaculis augue sed tellus vehicula fringilla. Integer congue finibus orci, nec gravida purus iaculis quis. Curabitur sagittis lorem ante, ut dapibus ligula maximus vel. Nunc volutpat, eros eget rhoncus ornare, mi mauris pellentesque eros, in bibendum nulla mauris ac turpis. Phasellus consequat risus nec arcu venenatis congue. Suspendisse sit amet volutpat lorem. Integer id elementum risus. Donec posuere congue lectus, eget placerat nibh laoreet viverra. Quisque in lobortis nunc. Proin vestibulum nisl a mi tincidunt, eget euismod quam placerat. Suspendisse placerat velit non hendrerit commodo. Nam consequat, tortor ut fermentum fringilla, enim felis luctus ipsum, et elementum lectus elit ut augue. Vestibulum a tristique nulla. Mauris semper, dui a elementum consectetur, ipsum diam tincidunt massa, aliquam vestibulum diam mi et augue. Sed ut dui tempor, facilisis leo et, molestie turpis. In hac habitasse platea dictumst. Vivamus quis magna at magna vulputate luctus. Nulla facilisi. Etiam elit diam, placerat vitae odio id, dictum dictum lectus. Morbi eget magna et diam auctor faucibus et at risus. Morbi facilisis et libero vel sagittis. Vivamus eget neque ac turpis luctus tristique.</string>
+    <string name="string_deporteApostado">\"Deporte elegido: \"</string>
+    <string name="string_apuesta">"Tu apuesta: "</string>
+
+
+</resources>

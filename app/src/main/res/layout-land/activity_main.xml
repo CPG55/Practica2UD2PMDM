@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    tools:context="carlosperez.tarea_pmdm02.MainActivity" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/textView_TituloMain"
+        android:text="@string/textview_titulomain"
+        android:textColor="@color/colorRojo"
+        android:textAlignment="center"
+        android:padding="10dp"
+
+        />
+
+    <TableRow>
+        <Button
+            android:text="@string/boton_registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/boton_Registro"
+            android:onClick="ejecutar_Registro"
+
+            />
+
+        <Button
+            android:text="@string/boton_apuestas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/boton_Apuestas"
+            android:onClick="ejecutar_Apuestas"
+
+            />
+
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:text="@string/boton_ajustes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/boton_Ajustes"
+            android:onClick="ejecutar_Ajustes"
+
+            />
+
+        <Button
+            android:text="@string/boton_sorteo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/boton_Sorteo"
+
+            />
+
+    </TableRow>
+
+</TableLayout>

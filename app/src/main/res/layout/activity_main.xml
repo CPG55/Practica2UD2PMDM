@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:layout_gravity="center"
+
+    android:id="@+id/activity_main"
+    tools:context="carlosperez.tarea_pmdm02.MainActivity">
+
+
+    <TextView
+
+        android:id="@+id/textView_TituloMain"
+        android:text="@string/textview_titulomain"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/colorRojo" />
+
+    <!-- TODOS LOS BOTONES ACTIVIDAD PRINCIPAL -->
+    <Button
+        android:id="@+id/boton_Registro"
+        android:text="@string/boton_registro"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+
+        android:onClick="ejecutar_Registro"
+        />
+
+    <Button
+        android:id="@+id/boton_Apuestas"
+        android:text="@string/boton_apuestas"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:onClick="ejecutar_Apuestas"
+
+        />
+
+    <Button
+        android:id="@+id/boton_Ajustes"
+        android:text="@string/boton_ajustes"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:onClick="ejecutar_Ajustes"
+
+        />
+
+    <Button
+        android:id="@+id/boton_Sorteo"
+        android:text="@string/boton_sorteo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        />
+
+    <!-- FIN DE LOS BOTONES ACTIVIDAD PRINCIPAL -->
+
+</LinearLayout>
