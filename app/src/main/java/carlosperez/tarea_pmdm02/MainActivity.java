@@ -32,14 +32,15 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
 
-            case R.id.MenuOpcion_Ayuda:
-                Intent intent = new Intent (this , AyudaActivity.class );
-                startActivity(intent);
+            // Icono del action bar.
+            case R.id.icono_Ayuda:
+                Intent intent_Help = new Intent(getApplicationContext(), AyudaActivity.class);
+                startActivity(intent_Help);
                 return true;
 
             case R.id.MenuOpcion_Info:
-                Intent intent2 = new Intent (this , InfoActivity.class );
-                startActivity(intent2);
+                Intent intent_About = new Intent(this, InfoActivity.class);
+                startActivity(intent_About);
                 return true;
 
             default:

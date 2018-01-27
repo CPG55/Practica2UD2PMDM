@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="es.uv.lisitt.actionbartest.MainActivity">
 
     <item
-        android:id="@+id/MenuOpcion_Ayuda"
+        android:id="@+id/icono_Ayuda"
+        android:icon="@android:drawable/ic_menu_help"
         android:title="@string/menu_ayuda"
-        />
+        app:showAsAction="always|withText" />
 
     <item
         android:id="@+id/MenuOpcion_Info"
