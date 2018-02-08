@@ -14,4 +14,8 @@
         android:id="@+id/MenuOpcion_Info"
         android:title="@string/acerca_de" />
 
+    <item
+        android:id="@+id/preferencias"
+        android:title="@string/menu_preferencias" />
+
 </menu>

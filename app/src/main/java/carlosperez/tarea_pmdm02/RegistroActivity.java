@@ -1,9 +1,8 @@
 package carlosperez.tarea_pmdm02;
 
+
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
@@ -11,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 /**
- * Created by CaRLoS on 11/11/2016.
+ * Created by CaRLoS on 11/11/2016. Modified 02/03/2018.
  */
 
 public class RegistroActivity  extends AppCompatActivity {
@@ -19,70 +18,43 @@ public class RegistroActivity  extends AppCompatActivity {
     String nombreRegistrado ;
     String emailRegistrado ;
     String edadRegistrada ;
-
+    DatePickerFragment calendarioFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
+        // Instancias de los campos registrados.
 
+        EditText textoEdad = findViewById(R.id.editText_Edad);
+        textoEdad.setOnClickListener(new View.OnClickListener() {
 
-        EditText fechaNacimiento = findViewById(R.id.editText_Edad);
-        fechaNacimiento.setOnClickListener(new View.OnClickListener() {
-
-            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
 
                 // Lanzar datepicker.
-                showDatePickerDialog();
+                calendarioFragment = new DatePickerFragment();
+                calendarioFragment.setFecha((EditText) view);
+                calendarioFragment.show(getSupportFragmentManager(), "Datepicker");
+
             }
         });
 
     }
 
-    private void showDatePickerDialog() {
-
-        MiFragmentoCalendario miDatePickerFragment = new MiFragmentoCalendario();
-        miDatePickerFragment.show(this.getSupportFragmentManager(), "datepicker");
-
-    }
-
-//    @RequiresApi(api = Build.VERSION_CODES.N)
-//    public void invocaCalendario(){
-//
-//        Calendar fechaSeleccionada = Calendar.getInstance();
-//
-//        int año = fechaSeleccionada.get(Calendar.YEAR);
-//        int mes = fechaSeleccionada.get(Calendar.MONTH);
-//        int dia = fechaSeleccionada.get(Calendar.DAY_OF_MONTH);
-//
-//        DatePickerDialog mDatePicker=new DatePickerDialog(RegistroActivity.this, new DatePickerDialog.OnDateSetListener() {
-//            public void onDateSet(DatePicker datepicker, int selectedyear, int selectedmonth, int selectedday) {
-//
-//                // codigo pa hacer algo con la fecha.
-//
-//            }
-//        },año, mes, dia);
-//
-//        mDatePicker.setTitle("Selecciona Fecha");
-//        mDatePicker.show();
-//
-//    }
-
 
     //Se desencadena al pulsar el botón de validar el registro.
     public void validar_Datos(View vista) {
 
-        //Variables de método para vistas de datos registrados.
-        //Recuperar Campo nombre
+        // Instancias de los campos registrados.
         EditText textoNombre = findViewById(R.id.editText_Nombre);
-        nombreRegistrado = (textoNombre.getText().toString());
-        //Recuperar Campo email
         EditText textoEmail = findViewById(R.id.editText_Email);
-        emailRegistrado = (textoEmail.getText().toString());
-        //Recuperar Campo edad.
         EditText textoEdad = findViewById(R.id.editText_Edad);
+
+        // Recuperar campos.
+        nombreRegistrado = (textoNombre.getText().toString());
+        emailRegistrado = (textoEmail.getText().toString());
         edadRegistrada = (textoEdad.getText().toString());
 
         // Si es menor , no se registra, si faltan datos marca error , y si esta correcto sale mensaje de guay!

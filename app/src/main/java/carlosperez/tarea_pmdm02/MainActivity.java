@@ -1,11 +1,13 @@
 package carlosperez.tarea_pmdm02;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent_About);
                 return true;
 
+            case R.id.preferencias:
+                Intent preferencias = new Intent("carlosperez.tarea_pmdm02.PreferenciasActivity_preferences");
+                startActivity(preferencias);
+
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -64,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult (int requestCode , int resultCode , Intent datos) {
 
-        //Si se ha registrado con éxito, la comparación de códigos es verdadera y se lanza la tostada.
+        // Si se ha registrado con éxito, la comparación de códigos es verdadera y se lanza la tostada.
         if (requestCode == RE_CODE_REGISTRO && resultCode == RESULT_OK ) {
             String textoResultado = datos.getExtras().getString("resultado");
             //Lanzar tostada con el resultado.
@@ -72,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             //Flag de registrado.
             registrado = true;
         }
-        //Recuperar datos del deporte apostado.
+        // Recuperar datos del deporte apostado.
         if (requestCode == RE_CODE_APUESTA && resultCode == RESULT_OK ) {
             String textoResultado = datos.getExtras().getString("resultado");
             //Lanzar tostada con el resultado.
@@ -81,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             apostado = true;
             apuesta = textoResultado;
         }
-        //Recuperar datos de los ajustes sobre la apuesta.
+        // Recuperar datos de los ajustes sobre la apuesta.
         if (requestCode == RE_CODE_AJUSTES && resultCode == RESULT_OK ) {
             String textoResultado = datos.getExtras().getString("resultado");
             //Lanzar tostada con el resultado.
@@ -90,6 +96,47 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     // --------------  FIN DE RECUPERACION DE DATOS DE INTENTS CON RETORNO ---------------- //
+
+    // -------------- METODOS ASOCIADOS A LAS PREFERENCIAS -------------------------------- //
+
+    //botón, mostrar valores de preferencias
+    public void onClickDisplay(View view) {
+        // obtenemos una instancia SharedPreferences,
+        // utilizando el formato <NombrePaquete>_preferences
+        // OJO MUY IMPORTANTE => el nombre del paquete es en este ejemplo: com.pmdm.ud5_preferences
+        // y a continuación se pone _preferences
+        // por eso el nombre completo a cargar es: "com.pmdm.ud5_preferences_preferences"
+        // MODE_PRIVATE: el archivo de preferencia solo lo puede abrir la aplicación que lo creó
+        SharedPreferences appPrefs = getSharedPreferences("carlosperez.tarea_pmdm02.PreferenciasActivity_preferences", MODE_PRIVATE);
+
+        //recupera una preferencia de cadena pasándole la clave y valor por defecto si no existe la preferencia
+        tostada(appPrefs.getString("editTextPref", ""));
+    }
+
+    //botón, modificar valores de preferencias
+    public void onClickModify(View view) {
+        // obtenemos una instancia SharedPreferences
+        SharedPreferences appPrefs = getSharedPreferences("carlosperez.tarea_pmdm02.PreferenciasActivity_preferences", MODE_PRIVATE);
+
+        //obtiene un objeto Editor mediante edit() => preparado para cambiar las preferencias
+        SharedPreferences.Editor prefsEditor = appPrefs.edit();
+
+        // cambia el valor de la preferencia "editTextPref" mediante putString()
+        // coge el valor del cuadro de texto txtString y se lo pone a esta preferencia
+        prefsEditor.putString("editTextPref", ((EditText) findViewById(R.id.txtString)).getText().toString());
+
+        //confirma los cambios
+        prefsEditor.commit();
+
+    }
+
+    // muestra una tostada o mensaje de duración larga
+    private void tostada(String str) {
+        Toast.makeText(getBaseContext(), str, Toast.LENGTH_LONG).show();
+    }
+
+    // -------------- FIN METODOS ASOCIADOS A LAS PREFERENCIAS -------------------------------- //
+
 
 
     // ------- FUNCIONALIDAD ASOCIADA A LOS BOTONES DE LA ACTIVIDAD PRINCIPAL -----------  //.
