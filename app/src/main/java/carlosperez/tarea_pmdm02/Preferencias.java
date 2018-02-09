@@ -7,13 +7,13 @@ import android.preference.PreferenceActivity;
  * Created by CaRLoS on 31/01/2018.
  */
 
-public class PreferenciasActivity extends PreferenceActivity {
+public class Preferencias extends PreferenceActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.layout.activity_preferencias);
+        addPreferencesFromResource(R.xml.preferencias);
 
     }
 

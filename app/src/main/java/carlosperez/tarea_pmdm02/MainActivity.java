@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.preferencias:
-                Intent preferencias = new Intent("carlosperez.tarea_pmdm02.PreferenciasActivity_preferences");
+                Intent preferencias = new Intent(this, Preferencias.class);
                 startActivity(preferencias);
 
             default:
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
         // y a continuación se pone _preferences
         // por eso el nombre completo a cargar es: "com.pmdm.ud5_preferences_preferences"
         // MODE_PRIVATE: el archivo de preferencia solo lo puede abrir la aplicación que lo creó
-        SharedPreferences appPrefs = getSharedPreferences("carlosperez.tarea_pmdm02.PreferenciasActivity_preferences", MODE_PRIVATE);
+        SharedPreferences appPrefs = getSharedPreferences("carlosperez.tarea_pmdm02.Preferencias", MODE_PRIVATE);
 
         //recupera una preferencia de cadena pasándole la clave y valor por defecto si no existe la preferencia
         tostada(appPrefs.getString("editTextPref", ""));
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
     //botón, modificar valores de preferencias
     public void onClickModify(View view) {
         // obtenemos una instancia SharedPreferences
-        SharedPreferences appPrefs = getSharedPreferences("carlosperez.tarea_pmdm02.PreferenciasActivity_preferences", MODE_PRIVATE);
+        SharedPreferences appPrefs = getSharedPreferences("carlosperez.tarea_pmdm02.Preferencias", MODE_PRIVATE);
 
         //obtiene un objeto Editor mediante edit() => preparado para cambiar las preferencias
         SharedPreferences.Editor prefsEditor = appPrefs.edit();

@@ -35,9 +35,7 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
 
     @Override
     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-
-        int edad = calcularEdad(datePicker);
-        fechaSeleccionada.setText(String.valueOf(edad));
+        fechaSeleccionada.setText(String.valueOf(calcularEdad(datePicker)));
     }
 
     public void setFecha(EditText editText) {
