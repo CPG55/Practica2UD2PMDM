@@ -11,11 +11,11 @@
         app:showAsAction="always|withText" />
 
     <item
-        android:id="@+id/MenuOpcion_Info"
+        android:id="@+id/menu_Info"
         android:title="@string/acerca_de" />
 
     <item
-        android:id="@+id/preferencias"
+        android:id="@+id/menu_preferencias"
         android:title="@string/menu_preferencias" />
 
 </menu>

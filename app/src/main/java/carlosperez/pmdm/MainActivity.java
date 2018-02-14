@@ -1,29 +1,49 @@
-package carlosperez.tarea_pmdm02;
+package carlosperez.pmdm;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Variables de clase.
+    //Códigos de RESPUESTA de los INTENTS con retorno.
+    //protected static final int RE_CODE_PREFERENCIAS = 0;
+    protected static final int RE_CODE_REGISTRO = 1;
+    protected static final int RE_CODE_APUESTA = 2;
+    protected static final int RE_CODE_AJUSTES = 3;
+
+    //Flags.
+    boolean registrado = false;
+    boolean apostado = false;
+    // Auxiliares.
+    private String apuesta;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // Cambiar tema de la aplicacion segun la preferencia. Antes de llamar al super.
+        if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean(("pref_theme"), false)) {
+            setTheme(R.style.AppTheme_Dark);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    }
+        //cargarPreferencias();
 
+    }
 
     //Método para implementar menu.
     @Override
-    public boolean onCreateOptionsMenu (Menu menu){
-        getMenuInflater().inflate(R.menu.mymenu, menu);
+    public boolean onCreateOptionsMenu(Menu miMenu) {
+        getMenuInflater().inflate(R.menu.menu, miMenu);
 
         return true;
     }
@@ -40,14 +60,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent_Help);
                 return true;
 
-            case R.id.MenuOpcion_Info:
+            case R.id.menu_Info:
                 Intent intent_About = new Intent(this, InfoActivity.class);
                 startActivity(intent_About);
                 return true;
 
-            case R.id.preferencias:
-                Intent preferencias = new Intent(this, Preferencias.class);
-                startActivity(preferencias);
+            case R.id.menu_preferencias:
+                Intent intent_preferencias = new Intent(this, SetPreferenciasActivity.class);
+                startActivity(intent_preferencias);
+                return true;
 
             default:
                 return super.onOptionsItemSelected(item);
@@ -55,16 +76,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // --------  RECUPERACION DE DATOS DE INTENTS CON RETORNO ---------------- //
-    //Variables de clase.
-    //Códigos de RESPUESTA de los INTENTS con retorno.
-    protected static final int RE_CODE_REGISTRO = 1;
-    protected static final int RE_CODE_APUESTA = 2;
-    protected static final int RE_CODE_AJUSTES = 3;
-    //Flags.
-    boolean registrado = false;
-    boolean apostado = false;
-    // Auxiliares.
-    String apuesta ;
 
     //Método para recuperar la información de la devolución de los intents.
     @Override
@@ -94,49 +105,14 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText( this ,getString(R.string.string_apuesta) + textoResultado, Toast.LENGTH_LONG).show();
 
         }
+
+        // Recuperar datos de las preferencias.
+        //  if (requestCode == RE_CODE_PREFERENCIAS && resultCode == RESULT_OK ) {
+        //cargarPreferencias();
+        // }
+
     }
     // --------------  FIN DE RECUPERACION DE DATOS DE INTENTS CON RETORNO ---------------- //
-
-    // -------------- METODOS ASOCIADOS A LAS PREFERENCIAS -------------------------------- //
-
-    //botón, mostrar valores de preferencias
-    public void onClickDisplay(View view) {
-        // obtenemos una instancia SharedPreferences,
-        // utilizando el formato <NombrePaquete>_preferences
-        // OJO MUY IMPORTANTE => el nombre del paquete es en este ejemplo: com.pmdm.ud5_preferences
-        // y a continuación se pone _preferences
-        // por eso el nombre completo a cargar es: "com.pmdm.ud5_preferences_preferences"
-        // MODE_PRIVATE: el archivo de preferencia solo lo puede abrir la aplicación que lo creó
-        SharedPreferences appPrefs = getSharedPreferences("carlosperez.tarea_pmdm02.Preferencias", MODE_PRIVATE);
-
-        //recupera una preferencia de cadena pasándole la clave y valor por defecto si no existe la preferencia
-        tostada(appPrefs.getString("editTextPref", ""));
-    }
-
-    //botón, modificar valores de preferencias
-    public void onClickModify(View view) {
-        // obtenemos una instancia SharedPreferences
-        SharedPreferences appPrefs = getSharedPreferences("carlosperez.tarea_pmdm02.Preferencias", MODE_PRIVATE);
-
-        //obtiene un objeto Editor mediante edit() => preparado para cambiar las preferencias
-        SharedPreferences.Editor prefsEditor = appPrefs.edit();
-
-        // cambia el valor de la preferencia "editTextPref" mediante putString()
-        // coge el valor del cuadro de texto txtString y se lo pone a esta preferencia
-        prefsEditor.putString("editTextPref", ((EditText) findViewById(R.id.txtString)).getText().toString());
-
-        //confirma los cambios
-        prefsEditor.commit();
-
-    }
-
-    // muestra una tostada o mensaje de duración larga
-    private void tostada(String str) {
-        Toast.makeText(getBaseContext(), str, Toast.LENGTH_LONG).show();
-    }
-
-    // -------------- FIN METODOS ASOCIADOS A LAS PREFERENCIAS -------------------------------- //
-
 
 
     // ------- FUNCIONALIDAD ASOCIADA A LOS BOTONES DE LA ACTIVIDAD PRINCIPAL -----------  //.
@@ -181,5 +157,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // --------------------- FIN DE FUNCIONALIDAD DE LOS BOTONES ------------------------- //
+
+    // -------------- METODOS ASOCIADOS A LAS PREFERENCIAS // SIN UTILIDAD ACTUAL -------------------------------- //
+
+    public void cargarPreferencias() {
+        // Instancia SharedPreferences para cargar las preferencias.
+        SharedPreferences misPreferencias = PreferenceManager.getDefaultSharedPreferences(this);
+
+        //boolean my_checkbox_preference = mySharedPreferences.getBoolean("checkbox_preference", false);
+        //prefCheckBox.setChecked(my_checkbox_preference);
+
+        //String my_edittext_preference = mySharedPreferences.getString("edittext_preference", "");
+        //prefEditText.setText(my_edittext_preference);
+
+    }
+
+    // muestra una tostada o mensaje de duración larga
+    private void tostada(String str) {
+        Toast.makeText(getBaseContext(), str, Toast.LENGTH_LONG).show();
+    }
+
+    // -------------- FIN METODOS ASOCIADOS A LAS PREFERENCIAS -------------------------------- //
 
 }

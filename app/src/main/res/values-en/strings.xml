@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Tarea PMDM02</string>
-    <string name="boton_ajustes">Settings</string>
+    <string name="app_name">Bets application PMDM</string>
+    <string name="boton_ajustes">Bet Settings</string>
     <string name="boton_apuestas">Bets</string>
     <string name="boton_registro">Register</string>
     <string name="boton_sorteo">Gift away</string>
@@ -36,4 +36,9 @@
     <string name="acerca_de">About</string>
     <string name="string_apuesta">Your bet:</string>
     <string name="string_deporteApostado">"Your sport choosed: "</string>
+    <string name="texto_ajustes_resultado1">Score 1</string>
+    <string name="texto_ajustes_resultado2">Score 2</string>
+    <string name="texto_partido" translatable="false">Match</string>
+    <string name="menu_preferencias">Settings</string>
+    <string name="titulo_preferencias">Settings Bets OnLine</string>
 </resources>

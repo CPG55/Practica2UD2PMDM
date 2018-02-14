@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="carlosperez.tarea_pmdm02">
+    package="carlosperez.pmdm">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
 
         <!-- Actividad Principal -->
-        <activity android:name=".MainActivity">
+        <activity android:name="carlosperez.pmdm.MainActivity">
             <intent-filter>
 
                 <action android:name="android.intent.action.MAIN" />
@@ -20,14 +20,15 @@
         </activity>
         <!-- Actividad Principal -->
 
-        <activity android:name=".RegistroActivity" />
-        <activity android:name=".ApuestasActivity" />
-        <activity android:name=".AjustesActivity"  />
-        <activity android:name=".AyudaActivity"    />
-        <activity android:name=".InfoActivity"     />
+        <activity android:name="carlosperez.pmdm.RegistroActivity" />
+        <activity android:name="carlosperez.pmdm.ApuestasActivity" />
+        <activity android:name="carlosperez.pmdm.AjustesActivity" />
+        <activity android:name="carlosperez.pmdm.AyudaActivity" />
+        <activity android:name="carlosperez.pmdm.InfoActivity" />
 
-        <!-- Actividad Preferencias -->
-        <activity android:name=".Preferencias" />
+        <!-- Activity PreferenciasFragment -->
+        <activity android:name="carlosperez.pmdm.PreferenciasFragment" />
+        <activity android:name="carlosperez.pmdm.SetPreferenciasActivity" />
 
     </application>
 

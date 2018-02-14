@@ -1,13 +1,13 @@
-package carlosperez.tarea_pmdm02;
+package carlosperez.pmdm;
 
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
+import android.preference.PreferenceFragment;
 
 /**
  * Created by CaRLoS on 31/01/2018.
  */
 
-public class Preferencias extends PreferenceActivity {
+public class PreferenciasFragment extends PreferenceFragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

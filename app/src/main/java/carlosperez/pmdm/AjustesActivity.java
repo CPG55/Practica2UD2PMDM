@@ -1,4 +1,4 @@
-package carlosperez.tarea_pmdm02;
+package carlosperez.pmdm;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -33,7 +33,7 @@ public class AjustesActivity extends Activity {
 
         // ------------------  Configuración de las TABS. ---------------------- //
         //Referencia del contenedor TabHost del layout
-        TabHost tabs = (TabHost) findViewById(android.R.id.tabhost);
+        TabHost tabs = findViewById(android.R.id.tabhost);
         //Método para configurar tabs
         tabs.setup();
 
@@ -60,7 +60,7 @@ public class AjustesActivity extends Activity {
 
         // ------------------  Configuración del Spinner. --------------------- //
         //Objeto spinner con referencia al layout
-        myspinner = (Spinner) findViewById(R.id.spinner_ajustes_Tab1);
+        myspinner = findViewById(R.id.spinner_ajustes_Tab1);
 
         //Datos para introducir al spinner.
         final String[] datos = new String[]{"1", "2", "5", "10"};
@@ -81,7 +81,7 @@ public class AjustesActivity extends Activity {
         deporteApostado = bundle.getString("apuesta");
 
         //Mostrar partido aleatorio en el texto de la segunda pestaña
-        TextView texto_evento = (TextView) findViewById(R.id.textView_Ajustes_Tab2);
+        TextView texto_evento = findViewById(R.id.textView_Ajustes_Tab2);
         String partido = partidoAleatorio(deporteApostado);
         texto_evento.setText(partido);
 
@@ -158,10 +158,10 @@ public class AjustesActivity extends Activity {
         //---------------------- LEER COMBINACION----------------------------//
 
         //Recuperar campo numero 1 de combinacion
-        EditText numero1 = (EditText) findViewById(R.id.editText_ajustes_num1);
+        EditText numero1 = findViewById(R.id.editText_ajustes_num1);
         numero1ajustado = (numero1.getText().toString());
         //Recuperar campo numero 2 de combinacion
-        EditText numero2 = (EditText) findViewById(R.id.editText_ajustes_num2);
+        EditText numero2 = findViewById(R.id.editText_ajustes_num2);
         numero2ajustado = (numero2.getText().toString());
 
         //--------------------------------------------------------------------//

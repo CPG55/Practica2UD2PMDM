@@ -7,7 +7,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    tools:context="carlosperez.tarea_pmdm02.MainActivity" >
+    tools:context="carlosperez.pmdm.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"

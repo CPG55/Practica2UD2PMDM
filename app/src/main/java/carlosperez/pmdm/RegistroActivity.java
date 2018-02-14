@@ -1,4 +1,4 @@
-package carlosperez.tarea_pmdm02;
+package carlosperez.pmdm;
 
 
 import android.content.Intent;

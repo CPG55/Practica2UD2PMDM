@@ -20,7 +20,6 @@
     <!-- Cadenas Activity Apuestas-->
 
     <string name="textview_tituloapuestas">Apuestas</string>
-
     <string name="checkbox_futbol">Fútbol</string>
     <string name="checkbox_tenis">Tenis</string>
     <string name="checkbox_baloncesto">Baloncesto</string>
@@ -35,15 +34,19 @@
     <string name="texto_apuesta">Dinero a apostar</string>
     <string name="boton_ajustes_guardar">GUARDAR</string>
     <string name="boton_ajustes_volver">VOLVER</string>
-    <string name="texto_ajustes_num1" translatable="false">Numero 1</string>
-    <string name="texto_ajustes_num2" translatable="false">Numero 2</string>
-    <string name="texto_partido" translatable="false">Evento</string>
+    <string name="texto_ajustes_resultado1" translatable="false">Resultado 1</string>
+    <string name="texto_ajustes_resultado2" translatable="false">Resultado 2</string>
+    <string name="texto_partido">Evento</string>
 
     <!-- Cadenas Activity Menu -->
 
     <string name="menu_informacion">Acerca de</string>
     <string name="menu_ayuda">Ayuda</string>
     <string name="menu_preferencias">Preferencias</string>
+
+    <string name="titulo_preferencias">Configuración de Apuestas OnLine</string>
+    <string name="theme_swap">Cambio de tema de la app</string>
+    <string name="pref_theme">pref_theme</string>
 
 
     <!-- Cadenas Imagenes Deportes -->

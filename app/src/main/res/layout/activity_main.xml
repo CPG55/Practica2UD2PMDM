@@ -9,7 +9,7 @@
     android:layout_gravity="center"
 
     android:id="@+id/activity_main"
-    tools:context="carlosperez.tarea_pmdm02.MainActivity">
+    tools:context="carlosperez.pmdm.MainActivity">
 
 
     <TextView

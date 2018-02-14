@@ -1,4 +1,4 @@
-package carlosperez.tarea_pmdm02;
+package carlosperez.pmdm;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -33,10 +33,10 @@ public class ApuestasActivity extends Activity {
     public void boton_aceptarApuesta (View vista) {
 
         //Objetos checkbox del interface.
-        CheckBox futbol = (CheckBox) findViewById(R.id.checkBox_Futbol);
-        CheckBox tenis = (CheckBox) findViewById(R.id.checkBox_Tenis);
-        CheckBox baloncesto = (CheckBox) findViewById(R.id.checkBox_Baloncesto);
-        CheckBox balonmano = (CheckBox) findViewById(R.id.checkBox_Balonmano);
+        CheckBox futbol = findViewById(R.id.checkBox_Futbol);
+        CheckBox tenis = findViewById(R.id.checkBox_Tenis);
+        CheckBox baloncesto = findViewById(R.id.checkBox_Baloncesto);
+        CheckBox balonmano = findViewById(R.id.checkBox_Balonmano);
 
 
         //Array de CheckBox
