@@ -14,7 +14,7 @@ public class AyudaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ayuda);
+        setContentView(R.layout.layout_ayuda);
 
         Button miBotonVolver = findViewById(R.id.boton_AyudaVolver);
 

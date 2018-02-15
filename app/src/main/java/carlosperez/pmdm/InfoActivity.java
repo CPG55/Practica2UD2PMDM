@@ -16,7 +16,7 @@ public class InfoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_info);
+        setContentView(R.layout.layout_info);
 
         Button miBotonVolver = findViewById(R.id.boton_InfoVolver);
 

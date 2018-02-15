@@ -58,11 +58,14 @@
         />
 
     <Button
-        android:id="@+id/boton_Sorteo"
-        android:text="@string/boton_sorteo"
+        android:id="@+id/boton_resultado"
+        android:text="@string/boton_resultado"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+
+        android:onClick="ejecutar_resultados"
+
         />
 
     <!-- FIN DE LOS BOTONES ACTIVIDAD PRINCIPAL -->

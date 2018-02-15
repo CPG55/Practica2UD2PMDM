@@ -24,7 +24,7 @@ public class RegistroActivity  extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro);
+        setContentView(R.layout.layout_registro);
         // Instancias de los campos registrados.
 
         EditText textoEdad = findViewById(R.id.editText_Edad);

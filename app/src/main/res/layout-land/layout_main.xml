@@ -53,11 +53,12 @@
             />
 
         <Button
-            android:text="@string/boton_sorteo"
+            android:text="@string/boton_resultado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/boton_Sorteo"
+            android:id="@+id/boton_resultado"
 
+            android:onClick="ejecutar_resultados"
             />
 
     </TableRow>

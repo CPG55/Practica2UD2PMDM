@@ -4,7 +4,7 @@
     <string name="boton_ajustes">Bet Settings</string>
     <string name="boton_apuestas">Bets</string>
     <string name="boton_registro">Register</string>
-    <string name="boton_sorteo">Gift away</string>
+    <string name="boton_resultado">Match results</string>
     <string name="boton_validar">Validate</string>
     <string name="boton_volver">Back</string>
     <string name="edad">Age</string>
@@ -40,5 +40,6 @@
     <string name="texto_ajustes_resultado2">Score 2</string>
     <string name="texto_partido" translatable="false">Match</string>
     <string name="menu_preferencias">Settings</string>
-    <string name="titulo_preferencias">Settings Bets OnLine</string>
+    <string name="titulo_preferencias">Bets OnLine Settings</string>
+    <string name="theme_swap">Change app theme</string>
 </resources>

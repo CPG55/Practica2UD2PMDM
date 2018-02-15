@@ -7,7 +7,7 @@
     <string name="boton_registro">Registro</string>
     <string name="boton_apuestas">Apuestas</string>
     <string name="boton_ajustes">Ajustes</string>
-    <string name="boton_sorteo">Sorteo</string>
+    <string name="boton_resultado">Resultados</string>
 
     <!-- Cadenas Activity Registro-->
     <string name="textview_tituloregistro">Registro</string>
@@ -46,7 +46,7 @@
 
     <string name="titulo_preferencias">Configuración de Apuestas OnLine</string>
     <string name="theme_swap">Cambio de tema de la app</string>
-    <string name="pref_theme">pref_theme</string>
+    <string name="pref_theme" translatable="false">pref_theme</string>
 
 
     <!-- Cadenas Imagenes Deportes -->

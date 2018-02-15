@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.layout_main);
 
         //cargarPreferencias();
 
@@ -155,6 +155,16 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(intencionAjustes , RE_CODE_AJUSTES);
         }
     }
+
+
+    public void ejecutar_resultados(View vista) {
+
+
+    }
+
+
+
+
 
     // --------------------- FIN DE FUNCIONALIDAD DE LOS BOTONES ------------------------- //
 

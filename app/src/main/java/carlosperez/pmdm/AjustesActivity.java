@@ -29,7 +29,7 @@ public class AjustesActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ajustes);
+        setContentView(R.layout.layout_ajustes);
 
         // ------------------  Configuración de las TABS. ---------------------- //
         //Referencia del contenedor TabHost del layout
