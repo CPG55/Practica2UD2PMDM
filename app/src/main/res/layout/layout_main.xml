@@ -9,7 +9,7 @@
     android:layout_gravity="center"
 
     android:id="@+id/activity_main"
-    tools:context="carlosperez.pmdm.MainActivity">
+    tools:context="carlosperez.pmdm.Activity_Main">
 
 
     <TextView
@@ -53,18 +53,19 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
 
-        android:onClick="ejecutar_Ajustes"
+        android:onClick="ejecutar_AjustesApuesta"
 
         />
 
     <Button
-        android:id="@+id/boton_resultado"
+        android:textSize="12dp"
         android:text="@string/boton_resultado"
+        android:id="@+id/boton_resultado"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
 
-        android:onClick="ejecutar_resultados"
+        android:onClick="ejecutar_Resultados"
 
         />
 

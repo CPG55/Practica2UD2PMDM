@@ -1,6 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:orientation="vertical">
 
-</TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+        <TableRow
+            android:id="@+id/cabeceraTabla"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+
+            <TextView
+                android:id="@+id/textView_deporte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="deporte" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textView_id_encuentro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="encuentro" />
+
+            <TextView
+                android:id="@+id/textView_equipo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Equipo 1" />
+
+            <TextView
+                android:id="@+id/textView_equipo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Equipo 2" />
+
+            <TextView
+                android:id="@+id/textView_resultado1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Resultado 1" />
+
+            <TextView
+                android:id="@+id/textView_resultado2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Resultado 2" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/encuentro2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/equipo1_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/equipo2_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/resultado1_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/resultado2_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TableRow>
+
+            <Button
+                android:textSize="12dp"
+                android:text="@string/boton_addResultado"
+                android:id="@+id/boton_"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                />
+
+            <Button
+                android:textSize="12dp"
+                android:text="@string/boton_volver"
+                android:id="@+id/boton_resultado"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:onClick="boton_volver"
+
+                />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
+
+
+

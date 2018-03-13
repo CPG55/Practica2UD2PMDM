@@ -7,7 +7,7 @@ import android.os.Bundle;
  * Created by CaRLoS on 09/02/2018.
  */
 
-public class SetPreferenciasActivity extends Activity {
+public class Activity_SetPreferencias extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,7 +1,9 @@
 package carlosperez.pmdm;
 
+import android.content.ContentValues;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class Activity_Main extends AppCompatActivity {
 
     //Variables de clase.
     //Códigos de RESPUESTA de los INTENTS con retorno.
@@ -56,17 +58,17 @@ public class MainActivity extends AppCompatActivity {
 
             // Icono del action bar.
             case R.id.icono_Ayuda:
-                Intent intent_Help = new Intent(getApplicationContext(), AyudaActivity.class);
+                Intent intent_Help = new Intent(getApplicationContext(), Activity_Ayuda.class);
                 startActivity(intent_Help);
                 return true;
 
             case R.id.menu_Info:
-                Intent intent_About = new Intent(this, InfoActivity.class);
+                Intent intent_About = new Intent(this, Activity_Informacion.class);
                 startActivity(intent_About);
                 return true;
 
             case R.id.menu_preferencias:
-                Intent intent_preferencias = new Intent(this, SetPreferenciasActivity.class);
+                Intent intent_preferencias = new Intent(this, Activity_SetPreferencias.class);
                 startActivity(intent_preferencias);
                 return true;
 
@@ -106,11 +108,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        // Recuperar datos de las preferencias.
-        //  if (requestCode == RE_CODE_PREFERENCIAS && resultCode == RESULT_OK ) {
-        //cargarPreferencias();
-        // }
-
     }
     // --------------  FIN DE RECUPERACION DE DATOS DE INTENTS CON RETORNO ---------------- //
 
@@ -119,36 +116,36 @@ public class MainActivity extends AppCompatActivity {
 
     //Lanzar Pantalla de Registro.
     public void ejecutar_Registro(View vista) {
-        //Intent que lanzará la actividad de registro.
-        Intent intent = new Intent(this, RegistroActivity.class);
+        // Intent que lanzará la actividad de registro.
+        Intent intent = new Intent(this, Activity_Registro.class);
 
-        //Lanzar intent con retorno de información.
+        // Lanzar intent con retorno de información.
         startActivityForResult(intent , RE_CODE_REGISTRO);
     }
 
 
-    //Lanzar Pantalla de Apuestas, esperando resultados.
+    // Lanzar Pantalla de Apuestas, esperando resultados.
     public void ejecutar_Apuestas (View vista) {
 
-        //Si no estas registrado no puedes lanzar las Apuestas.
+        // Si no estas registrado no puedes lanzar las Apuestas.
         if (!registrado) {
             Toast.makeText( this , "Error no puedes apostar sino te has registrado", Toast.LENGTH_LONG).show();
         } else {
-            Intent intencionApostar = new Intent(this, ApuestasActivity.class);
+            Intent intencionApostar = new Intent(this, Activity_Apuestas.class);
             //Lanzar intent con retorno de información.
             startActivityForResult(intencionApostar , RE_CODE_APUESTA);
         }
     }
 
-    //Lanzar Pantalla de Ajustes, pasando la información del deporte al que se apuesta.
-    public void ejecutar_Ajustes (View vista) {
+    // Lanzar Pantalla de Ajustes, pasando la información del deporte al que se apuesta.
+    public void ejecutar_AjustesApuesta(View vista) {
 
         //Si no has seleccionado la apuesta no puedes lanzar Ajustes.
         if (!apostado) {
             Toast.makeText( this , "Error no puedes realizar ajustes sino has seleccionado el tipo de apuesta", Toast.LENGTH_LONG).show();
         } else {
 
-            Intent intencionAjustes = new Intent(this, AjustesActivity.class);
+            Intent intencionAjustes = new Intent(this, Activity_ApuestasAjustes.class);
             //Añadir información de apuesta en el intent.
             intencionAjustes.putExtra("apuesta" , apuesta);
             //Lanzar intent con retorno de información.
@@ -156,37 +153,61 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void ejecutar_Resultados(View vista) {
 
-    public void ejecutar_resultados(View vista) {
 
+        // La lógica aqui debería ser la misma que anteriormente o cambiar el programa, cuándo haya un deporte al que hemos apostado, se generan resultados.
+        // En el intent habrá que pasar el deporte a mostrar.
+        // Por ahora vamos a suponer que tenemos uno que mostrar para no repetir el proceso.
+        // La variable "apuesta" contiene el deporte que se ha elegido, hay que pasarlo en el intent para saber de que deporte hablamos. Vamos a suponer que tenemos el deporte y el partido.
+        String deporte = "Futbol";
+        String equipo1 = "Real Madrid";
+        String equipo2 = "Barcelona";
+        // Resultados del partido, en teoría la bse de datos debería nutrirse de resultados reales.
+        String resultado1 = "1";
+        String resultado2 = "3";
+
+        SQLiteDatabase database = null;
+
+        try {
+            // Escribir datos en la BD.
+            // Abrir base de datos.
+            BDHelper bdHelper = new BDHelper(this);
+            database = bdHelper.getWritableDatabase();
+
+            // Escribir datos en la BD. Primer valor del contenvalues es la key de la columna
+            ContentValues valoresEncuentros = new ContentValues();
+            valoresEncuentros.put(BDHelper.COLUMNA_EQUIPO1, equipo1);
+            valoresEncuentros.put(BDHelper.COLUMNA_EQUIPO2, equipo2);
+            valoresEncuentros.put(BDHelper.COLUMNA_RESULTADO1, resultado1);
+            valoresEncuentros.put(BDHelper.COLUMNA_RESULTADO2, resultado2);
+
+            // Insertar datos del encuentro.
+            database.insert(BDHelper.DATABASE_TABLE_NAME, null, valoresEncuentros);
+            // Cerrar base de datos.
+            database.close();
+
+            Toast.makeText(this, "Almacenamiento base de datos correcta", Toast.LENGTH_SHORT).show();
+
+        } catch (SQLException excepcion) {
+            excepcion.printStackTrace();
+        } finally {
+            database.close();
+        }
+
+        // Intent que lanzará la actividad de resultados. Se pasa el nombre del deporte para mostrar en la cabecera.
+        Intent intencionResultados = new Intent(this, Activity_Resultados.class);
+        intencionResultados.putExtra("deporte", deporte);
+
+        // Lanzar intent sin retorno de información.
+        startActivity(intencionResultados);
 
     }
 
-
-
-
-
-    // --------------------- FIN DE FUNCIONALIDAD DE LOS BOTONES ------------------------- //
-
-    // -------------- METODOS ASOCIADOS A LAS PREFERENCIAS // SIN UTILIDAD ACTUAL -------------------------------- //
-
-    public void cargarPreferencias() {
-        // Instancia SharedPreferences para cargar las preferencias.
-        SharedPreferences misPreferencias = PreferenceManager.getDefaultSharedPreferences(this);
-
-        //boolean my_checkbox_preference = mySharedPreferences.getBoolean("checkbox_preference", false);
-        //prefCheckBox.setChecked(my_checkbox_preference);
-
-        //String my_edittext_preference = mySharedPreferences.getString("edittext_preference", "");
-        //prefEditText.setText(my_edittext_preference);
-
-    }
 
     // muestra una tostada o mensaje de duración larga
     private void tostada(String str) {
         Toast.makeText(getBaseContext(), str, Toast.LENGTH_LONG).show();
     }
-
-    // -------------- FIN METODOS ASOCIADOS A LAS PREFERENCIAS -------------------------------- //
 
 }

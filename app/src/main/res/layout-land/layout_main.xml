@@ -7,7 +7,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    tools:context="carlosperez.pmdm.MainActivity">
+    tools:context="carlosperez.pmdm.Activity_Main">
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,7 +48,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/boton_Ajustes"
-            android:onClick="ejecutar_Ajustes"
+
+            android:onClick="ejecutar_AjustesApuesta"
 
             />
 
@@ -59,6 +60,7 @@
             android:id="@+id/boton_resultado"
 
             android:onClick="ejecutar_resultados"
+
             />
 
     </TableRow>

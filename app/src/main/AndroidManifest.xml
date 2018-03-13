@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
 
         <!-- Actividad Principal -->
-        <activity android:name="carlosperez.pmdm.MainActivity">
+        <activity android:name="carlosperez.pmdm.Activity_Main">
             <intent-filter>
 
                 <action android:name="android.intent.action.MAIN" />
@@ -20,15 +20,17 @@
         </activity>
         <!-- Actividad Principal -->
 
-        <activity android:name="carlosperez.pmdm.RegistroActivity" />
-        <activity android:name="carlosperez.pmdm.ApuestasActivity" />
-        <activity android:name="carlosperez.pmdm.AjustesActivity" />
-        <activity android:name="carlosperez.pmdm.AyudaActivity" />
-        <activity android:name="carlosperez.pmdm.InfoActivity" />
+        <activity android:name="carlosperez.pmdm.Activity_Registro" />
+        <activity android:name="carlosperez.pmdm.Activity_Apuestas" />
+        <activity android:name="carlosperez.pmdm.Activity_ApuestasAjustes" />
+        <activity android:name="carlosperez.pmdm.Activity_Ayuda" />
+        <activity android:name="carlosperez.pmdm.Activity_Informacion" />
+        <activity android:name="carlosperez.pmdm.Activity_Resultados" />
 
         <!-- Activity PreferenciasFragment -->
-        <activity android:name="carlosperez.pmdm.PreferenciasFragment" />
-        <activity android:name="carlosperez.pmdm.SetPreferenciasActivity" />
+        <!-- <activity android:name="carlosperez.pmdm.PreferenciasFragment" /> -->
+        <activity android:name="carlosperez.pmdm.Activity_SetPreferencias" />
+
 
     </application>
 

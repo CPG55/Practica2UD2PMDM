@@ -13,7 +13,7 @@ import android.widget.Toast;
  * Created by CaRLoS on 11/11/2016. Modified 02/03/2018.
  */
 
-public class RegistroActivity  extends AppCompatActivity {
+public class Activity_Registro extends AppCompatActivity {
 
     String nombreRegistrado ;
     String emailRegistrado ;
@@ -96,7 +96,7 @@ public class RegistroActivity  extends AppCompatActivity {
         public void run() {
             try {
                 Thread.sleep(3500); // Retraso equivalente a LENGTH_LONG en la tostada.
-                RegistroActivity.this.finish(); //Destruir actividad.
+                Activity_Registro.this.finish(); //Destruir actividad.
             } catch (Exception e) {
                 e.printStackTrace();
             }

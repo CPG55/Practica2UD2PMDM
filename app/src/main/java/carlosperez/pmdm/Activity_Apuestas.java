@@ -11,7 +11,7 @@ import android.widget.Toast;
  * Created by CaRLoS on 13/11/2016.
  */
 
-public class ApuestasActivity extends Activity {
+public class Activity_Apuestas extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,7 +97,7 @@ public class ApuestasActivity extends Activity {
         public void run() {
             try {
                 Thread.sleep(3500); // Retraso equivalente a LENGTH_LONG en la tostada.
-                ApuestasActivity.this.finish(); //Destruir actividad.
+                Activity_Apuestas.this.finish(); //Destruir actividad.
             } catch (Exception e) {
                 e.printStackTrace();
             }

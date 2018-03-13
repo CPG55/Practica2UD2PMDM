@@ -5,7 +5,7 @@
     android:id="@+id/activity_registro"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context="carlosperez.pmdm.RegistroActivity"
+    tools:context="carlosperez.pmdm.Activity_Registro"
     android:layout_gravity="center">
 
         <TextView

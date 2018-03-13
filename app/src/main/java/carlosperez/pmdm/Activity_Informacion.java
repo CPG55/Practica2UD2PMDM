@@ -5,18 +5,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+
+
 /**
  * Created by CaRLoS on 21/11/2016.
  */
 
-public class AyudaActivity extends AppCompatActivity {
+public class Activity_Informacion extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_ayuda);
+        setContentView(R.layout.layout_info);
 
-        Button miBotonVolver = findViewById(R.id.boton_AyudaVolver);
+        Button miBotonVolver = findViewById(R.id.boton_InfoVolver);
 
         miBotonVolver.setOnClickListener(new View.OnClickListener() {
 
@@ -26,6 +28,8 @@ public class AyudaActivity extends AppCompatActivity {
             }
 
         });
-
     }
+
+
+
 }

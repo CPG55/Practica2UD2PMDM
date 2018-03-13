@@ -18,7 +18,7 @@ import android.widget.Toast;
  * Created by CaRLoS on 13/11/2016.
  */
 
-public class AjustesActivity extends Activity {
+public class Activity_ApuestasAjustes extends Activity {
 
     //Variables de clase para spinner y campos de ajustes.
     private Spinner myspinner;
@@ -205,7 +205,7 @@ public class AjustesActivity extends Activity {
             public void run() {
                 try {
                     Thread.sleep(3500); // Retraso equivalente a LENGTH_LONG en la tostada.
-                    AjustesActivity.this.finish(); //Destruir actividad.
+                    Activity_ApuestasAjustes.this.finish(); //Destruir actividad.
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
